@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strconv"
+	//"strconv"
 )
 
 func main() {
@@ -12,24 +12,25 @@ func main() {
 }
 
 func isPalindrome(x int) bool {
-	var str string = strconv.Itoa(x)
-	var length int = len(str)
-	var intarray [length]int
+	//var str string = strconv.Itoa(x)
+	//var length int = len(str)
+	//var intarray [length]int
+	//
+	//for i := 0; i < len(str); i++ {
+	//	intarray[i] = x % exponent(10, i)
+	//}
+	//
+	//for i, j := 0, len(intarray)-1; i < j; i, j = i+1, j-1 {
+	//	intarray[i], intarray[j] = intarray[j], intarray[i]
+	//}
 
-	for i := 0; i < len(str); i++ {
-		intarray[i] = x % exponent(10, i)
-	}
+	//if str == resultstr {
+	//	return true
+	//} else {
+	//	return false
+	//}
 
-	for i, j := 0, len(intarray)-1; i < j; i, j = i+1, j-1 {
-		intarray[i], intarray[j] = intarray[j], intarray[i]
-	}
-
-	if str == resultstr {
-		return true
-	} else {
-		return false
-	}
-
+	return false
 }
 
 func exponent(a, n int) int {
