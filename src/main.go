@@ -13,22 +13,17 @@ type test struct {
 	B  string
 }
 
-// UserInfo 用户信息
-type UserInfo struct {
-	ID     uint
-	Name   string
-	Gender string
-	Hobby  string
-}
-
 func main() {
 	router := gin.Default()
 	router.GET("/hello", func(context *gin.Context) {
 		db, err := gorm.Open("mysql", "root:@(localhost:3306)/test?charset=utf8mb4&parseTime=True&loc=Local")
-		db.LogMode(true)
+
 		if err != nil {
 			panic(err)
 		}
+
+		db.LogMode(true)
+
 		defer db.Close()
 
 		var test1 = new(test)
