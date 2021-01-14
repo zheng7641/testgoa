@@ -1,16 +1,12 @@
 package main
 
 import (
+	c1 "./controller"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	router := gin.Default()
-	router.GET("/hello", func(context *gin.Context) {
-		context.JSON(200, gin.H{
-			"code":    200,
-			"success": true,
-		})
-	})
+	router.GET("/hello", c1.Test1)
 	_ = router.Run("localhost:9090")
 }
