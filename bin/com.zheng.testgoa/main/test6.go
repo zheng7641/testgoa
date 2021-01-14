@@ -43,6 +43,9 @@ func main() {
 
 	var t1 test
 	t1.testa()
+
+	f1 := test.testa
+	fmt.Println(f1)
 }
 
 type test struct {
